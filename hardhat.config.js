@@ -1,0 +1,12 @@
+require("@nomicfoundation/hardhat-toolbox");
+require('dotenv').config();
+
+module.exports = {
+  solidity: "0.8.17",
+  networks: {
+    goerli:{
+      url: process.env.TEST_ALCHEMY_URL,
+      accounts:[process.env.TESTNET_PRIVATE_KEY]
+    }
+  }
+};
